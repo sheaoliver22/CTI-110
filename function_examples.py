@@ -7,8 +7,20 @@ def multiply(num1, num2, num3):
 
 # Define an addition function
 def add(num1, num2, num3):
-    result = num1 * num2 * num3
+    result = num1 + num2 + num3
     print(result)
+
+def returnNum():
+    userInput = input("Give me a big number: ")
+    while not userInput.isnumeric():
+        print("Value must be a number")
+        userInput = input("Give me a big number: ")
+    return int(userInput)
+
+def getName(lastName):
+    name = input("Enter your name: ")
+    fullname = "******************" + name + "******************" + lastName
+    return fullname
 
 # Define the main function
 def main():
@@ -20,6 +32,12 @@ def main():
     multiply(first_num,second_num,third_num)
     # Call the add function
     add(first_num,second_num,third_num)
+
+    bigNum = returnNum()
+
+    print(bigNum * 5)
+
+    print(getName("Oliver"))
 
 #Call the main function
 if __name__ == "__main__":
